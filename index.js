@@ -46,6 +46,9 @@ function filter(state){
   }
 }
 function log(type, message) {
+  if (type === "log"){
+    type = "info";
+  }
   SaideConsole.append('<div class="sai-de-console-' + type + '"' +
     ' data-status="' + type + '">' + message + '</div>');
 
@@ -79,16 +82,15 @@ function error(message){
   log("error", message);
 }
 
-Sai.on("jserror", function(err){
-  error( err.msg + '<br/>File: ' +err.file + '#L' + err.line);
-});
-
 module.exports = {
   show: function(){
     SaiDeBar.show();
   },
   hide: function(){
     SaiDeBar.hide();
+  },
+  log: function(message){
+    log("log", message);
   },
   info: info,
   warn: warn,

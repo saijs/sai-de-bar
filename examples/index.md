@@ -8,16 +8,26 @@
 <script src="/sea-modules/sai/3.0.0/seer-jsniffer.js?nowrap"></script>
 
 ````javascript
-seajs.use(['sai', 'index'], function(Sai, SaiDeBar) {
-  Sai.error(new Error("e"))
-  Sai.error(new Error("e"))
-  Sai.error(new Error("e"))
+seajs.use(['sai', 'index'], function(Sai, Saidebar) {
 
-  SaiDeBar.error("error")
-  SaiDeBar.error("error")
-  SaiDeBar.error("error")
-  SaiDeBar.error("error")
-  SaiDeBar.info("info")
-  SaiDeBar.warn("warn")
+  Sai.on("jserror", function(err){
+    Saidebar.error( 'Message: ' + err.msg + '<br/>File: ' +err.file + '<br/>Line: ' + err.line);
+  });
+
+  Sai.error(new Error("e1"));
+  Sai.error(new Error("e2"));
+  Sai.error(new Error("e3"));
+
+  Saidebar.log("log");
+
+  Saidebar.error("error");
+  Saidebar.error("error");
+  Saidebar.error("error");
+  Saidebar.error("error");
+
+  Saidebar.info("info1");
+  Saidebar.info("info2");
+
+  Saidebar.warn("warn");
 });
 ````
