@@ -10,6 +10,8 @@
 ````javascript
 seajs.use(['sai', 'index'], function(Sai, Saidebar) {
 
+  Saidebar.open();
+
   Sai.on("jserror", function(err){
     Saidebar.error( 'Message: ' + err.msg + '<br/>File: ' +err.file + '<br/>Line: ' + err.line);
   });

@@ -5,7 +5,7 @@ var Sai = require("sai");
 require("./bar.css");
 
 var count = 0;
-var SaiDeBar = $('<div class="sai-de-bar" tabindex="0"></div>').appendTo(document.body);
+var SaiDeBar = $('<div class="sai-de-bar" style="display:none;" tabindex="0"></div>').appendTo(document.body);
 var StatusBar = $('<div class="sai-de-status-bar">' +
   '<span class="sai-de-status-bar-error" data-status="error"></span>' +
   '<span class="sai-de-status-bar-warn" data-status="warn"></span>' +
@@ -83,10 +83,10 @@ function error(message){
 }
 
 module.exports = {
-  show: function(){
+  open: function(){
     SaiDeBar.show();
   },
-  hide: function(){
+  close: function(){
     SaiDeBar.hide();
   },
   log: function(message){
