@@ -1,0 +1,26 @@
+{
+  "name": "sai-de-bar",
+  "version": "0.1.0",
+  "description": "Sai 的 Bar",
+  "keywords": [],
+  "homepage": "https://github.com/saijs/sai-de-bar",
+  "author": "闲耘<hotoo.cn@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saijs/sai-de-bar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saijs/sai-de-bar/issues"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "jquery": "1.7.2",
+      "sai": "3.0.0"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}

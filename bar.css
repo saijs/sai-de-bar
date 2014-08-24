@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+.sai-de-bar {
+  background: #eee;
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  font-size: 10px;
+  z-index: 10000;
+  transition: 0.6s height ease;
+}
+.sai-de-bar:hover ,
+.sai-de-bar:focus {
+  height: 150px;
+  overflow: auto;
+  outline: 0;
+}
+
+.sai-de-status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.sai-de-status-bar > span {
+  position: fixed;
+  display: inline-block;
+  float: left;
+  height: 3px;
+}
+.sai-de-status-bar:hover > span {
+  height: 5px
+}
+.sai-de-status-bar-error {
+  background-color: #f60;
+}
+.sai-de-status-bar-warn {
+  background-color: #fc0;
+}
+.sai-de-status-bar-info {
+  background-color: #ccc;
+}
+
+.sai-de-console {
+  position: relative;
+  left: 0;
+  top: 5px;
+  width: 100%;
+}
+.sai-de-console > div {
+  padding: 4px 10px;
+  border-top: 1px solid #ddd;
+}
+.sai-de-console > div:first-child {
+  border-top-width: 0;
+}
+.sai-de-console-error {
+  color: #f30;
+}
+.sai-de-console-warn {
+  color: #f80;
+}
+.sai-de-console-info {
+  color: #333;
+}
