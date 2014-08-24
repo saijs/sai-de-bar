@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body {
+  margin-bottom: 5px;
+}
+
 .sai-de-bar {
   background: #eee;
   display: block;
@@ -25,6 +29,7 @@
   left: 0;
   width: 100%;
   cursor: pointer;
+  z-index: 10002;
 }
 .sai-de-status-bar > span {
   position: fixed;
@@ -50,13 +55,14 @@
   left: 0;
   top: 5px;
   width: 100%;
+  z-index: 10001;
 }
 .sai-de-console > div {
   padding: 4px 10px;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-.sai-de-console > div:first-child {
-  border-top-width: 0;
+.sai-de-console > div:last-child {
+  border-bottom-width: 0;
 }
 .sai-de-console-error {
   color: #f30;
